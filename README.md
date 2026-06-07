@@ -37,3 +37,9 @@ This work is published under [MIT][mit] License.
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
 [CD]: https://en.wikipedia.org/wiki/Continuous_deployment
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+
+Use bundle exec jekyll s to start the server.  Commit and push to host at https://jmcbri.github.io/.  Use JEKYLL_ENV=produciton bundle exec jekyll b which will build to _site folder.
+
+Or to do it all:
+
+JEKYLL_ENV=produciton bundle exec jekyll b && cp -r ~/development/all-static-websites/jmcbri.github.io/_site/* ~/development/all-static-websites/html/randomrants.us &&  cd ~/development/all-static-websites && git add . && git commit -am "Changes to randomrants.us" && git push && ~/development/all-static-websites/push_pub_restart.rb
