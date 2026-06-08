@@ -25,8 +25,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+# <<<<<<< HEAD
+#     env:
+#       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+# =======
+# >>>>>>> v7.5.0
 
     steps:
       - name: Checkout
@@ -44,8 +47,12 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
+# <<<<<<< HEAD
           # ruby-version: 3.4
           ruby-version: 4.0
+# =======
+#           ruby-version: 3.4
+# >>>>>>> v7.5.0
           bundler-cache: true
 
       - name: Build site
@@ -73,4 +80,8 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+# <<<<<<< HEAD
+#         uses: actions/deploy-pages@v4
+# =======
         uses: actions/deploy-pages@v4
+# >>>>>>> v7.5.0
